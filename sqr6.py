@@ -206,7 +206,7 @@ def main(sidelen = 4):
     for a in range(2**sidelen):
         mainsolve(r[a],r[a].ones,0)
 debug = False
-log = False
+log = True
 #for i in range(2,8):
 #    allcount=0
 #    main(i)
@@ -222,6 +222,8 @@ for i in range(3,11):
     #print(decsolutions)
     input()
 """
+"""
+# benchmark:
 repeat = 2
 rep = int(repeat / 2)
 maxx = 8
@@ -238,4 +240,11 @@ for lll in range(3,maxx):
         print(allcount)
     print(timeit[:rep])
     print(timeit[rep:])
+    input()
+"""
+maxx = 8
+for lll in range(3,maxx):
+    allcount = 0
+    main(lll)
+    print(f'{allcount} solutions for {lll}x{lll}')
     input()
